@@ -23,19 +23,39 @@ public class Calculator {
                 break;
 
             case "-":
-                int hasil2 = AngkaPertama - AngkaKedua;
-                System.out.println("Hasilnya: " + hasil2);
-                break;
-            
+                if (AngkaPertama > AngkaKedua) {
+                    int hasil2 = AngkaPertama - AngkaKedua;
+                    System.out.println("Hasilnya: " + hasil2);
+                    break;
+                }
+                else {
+                    int hasil2 = AngkaKedua - AngkaPertama;
+                    System.out.println("Hasilnya: " + hasil2);
+                    break;
+                }
+
             case ":":
-                int hasil3 = AngkaPertama / AngkaKedua;
-                System.out.println("Hasilnya: " + hasil3);
-                break;
+                if (AngkaKedua == 0 || AngkaPertama == 0) {
+                    System.out.println("Pembagian tidak bisa dilakukan dengan angka nol!");
+                    break;
+                }
+                else {
+                    int hasil3 = AngkaPertama / AngkaKedua;
+                    System.out.println("Hasilnya: " + hasil3);
+                    break;      
+                }
+                
 
             case "*":
-                int hasil4 = AngkaPertama * AngkaKedua;
-                System.out.println("Hasilnya: " + hasil4);
-                break;
+                if (AngkaKedua == 0 || AngkaPertama == 0) {
+                    System.out.println("Perkalian tidak bisa dilakukan dengan angka nol!");
+                    break;
+                }
+                else {
+                    int hasil3 = AngkaPertama * AngkaKedua;
+                    System.out.println("Hasilnya: " + hasil3);
+                    break;      
+                }
         
             default:
                 System.out.println("Error");
