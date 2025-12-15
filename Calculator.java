@@ -9,59 +9,51 @@ public class Calculator {
         String operation = scanner.nextLine();
         
         System.out.print("Masukkan angka pertama : ");
-        int AngkaPertama = scanner.nextInt();
+        double AngkaPertama = scanner.nextInt();
         
         System.out.print("Masukkan angka kedua: ");
-        int AngkaKedua = scanner.nextInt();
+        double AngkaKedua = scanner.nextInt();
 
-        scanner.close();
+        double hasil = 0;
 
         switch (operation) {
             case "+":
-                int hasil1 = AngkaPertama + AngkaKedua;
-                System.out.println("Hasilnya: " + hasil1);
+                hasil = AngkaPertama + AngkaKedua;
+                System.out.println("Hasilnya: " + hasil);
                 break;
 
             case "-":
                 if (AngkaPertama > AngkaKedua) {
-                    int hasil2 = AngkaPertama - AngkaKedua;
-                    System.out.println("Hasilnya: " + hasil2);
-                    break;
+                    hasil = AngkaPertama - AngkaKedua;
+                    System.out.println("Hasilnya: " + hasil);
                 }
                 else {
-                    int hasil2 = AngkaKedua - AngkaPertama;
-                    System.out.println("Hasilnya: " + hasil2);
-                    break;
+                    hasil = AngkaKedua - AngkaPertama;
+                    System.out.println("Hasilnya: " + hasil);
                 }
+                break;
 
             case ":":
                 if (AngkaKedua == 0 || AngkaPertama == 0) {
                     System.out.println("Pembagian tidak bisa dilakukan dengan angka nol!");
-                    break;
                 }
                 else {
-                    int hasil3 = AngkaPertama / AngkaKedua;
-                    System.out.println("Hasilnya: " + hasil3);
-                    break;      
+                    hasil = AngkaPertama / AngkaKedua;
+                    System.out.println("Hasilnya: " + hasil);      
                 }
+                break;
                 
 
             case "*":
-                if (AngkaKedua == 0 || AngkaPertama == 0) {
-                    System.out.println("Perkalian tidak bisa dilakukan dengan angka nol!");
-                    break;
-                }
-                else {
-                    int hasil3 = AngkaPertama * AngkaKedua;
-                    System.out.println("Hasilnya: " + hasil3);
-                    break;      
-                }
+                hasil = AngkaPertama * AngkaKedua;
+                System.out.println("Hasilnya: " + hasil);      
+                break;
         
             default:
                 System.out.println("Error");
                 break;
         }
-
+        scanner.close();
 
     }
 }
