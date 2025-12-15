@@ -50,7 +50,7 @@ public class Calculator {
                 break;
         
             default:
-                System.out.println("Error");
+                System.out.println("Error, dikarenakan tidak terdapat operasi matematika");
                 break;
         }
         scanner.close();
